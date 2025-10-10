@@ -1,13 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Labs | Microcontroller Lab</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-		<!-- Your code goes here-->
+  <p class="title"><a href="#">Digital-to-Analog Converter</a></p>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+  <div class="container">
+    <div class="top-buttons">
+      <button id="instructionsBtn" class="yellow-btn">Read Instructions</button>
+    </div>
+
+    <!-- Instructions Popup -->
+    <div id="instructionsPopup" class="popup">
+      <div class="popup-content">
+        <h2>Instructions</h2>
+        <ol class="abc">
+          <li>Click <b>View Circuit Diagram</b> to see how the 8051 and DAC are connected in logic diagram and in block diagram.</li>
+          <li>Click <b>View Assembly Code</b> to analyse the assembly code used for this experiment.</li>
+          <li>Now according to your analysis write your code in the <b>Assembly Code Editor</b>.</li>
+          <li>Click <b>Check Code</b> to verify your program against the given code.
+            <ul>
+              <li>If correct → a success message will appear and <b>Start Simulation</b> will be enabled.</li>
+              <li>If incorrect → you’ll be asked to review and correct your program.</li>
+            </ul>
+          </li>
+          <li>(Optional) You can directly copy code into editor by clicking on <b>Use Code</b> in View Assembly code popup.</li>
+          <li>After validation, click <b>Start Simulation</b> to run the simulation.</li>
+          <li>Observe the Ramp waveform. You can Click at any point to view the values.</li>
+          <li>If you want to save generated waveform, click <b>Download Graph</b>.</li>
+          <li>If you want to save your program, click <b>Download Assembly Code</b>.</li>
+          <li>Click <b>Reset</b> to stop the simulation, clear the editor, and reset everything to default.</li>
+        </ol>
+        <div class="popup-buttons">
+          <button id="closeInstructions" class="blue-btn">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="simulator-card">
+      <div class="editor-section">
+        <label>Assembly Code Editor</label>
+        <textarea id="codeEditor" placeholder="Write your assembly code here..."></textarea>
+        <div class="tip">Tip: Click "View Assembly Code" then "Use Code" to copy it into the editor.</div>
+      </div>
+
+      <div class="button-row">
+        <button id="viewCircuit" class="blue-btn">View Circuit Diagram</button>
+        <button id="viewCode" class="blue-btn">View Assembly Code</button>
+        <button id="checkCode" class="blue-btn">Check Code</button>
+        <button id="downloadCode" class="blue-btn">Download Assembly Code</button>
+        <button id="startSim" class="blue-btn">Start Simulation</button>
+        <button id="downloadGraph" class="blue-btn">Download Graph</button>
+        <button id="resetSim" class="red-btn">Reset</button>
+      </div>
+
+      <!-- Assembly Code Popup -->
+      <div id="codePopup" class="popup">
+        <div class="popup-content">
+          <h3>DAC Code</h3>
+          <pre id="sampleCode"></pre>
+          <div class="popup-buttons">
+            <button id="useCode" class="blue-btn">Use Code</button>
+            <button id="closeCode" class="red-btn">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Circuit Diagram Popup -->
+      <div id="circuitPopup" class="popup">
+        <div class="popup-content large">
+          <p class="heading">Components used in this experiment: <b>8051 Microcontroller, DAC, Scope.</b></p>
+          <p class="heading">Flow of circuit: <b>8051 Microcontroller ⟶ DAC ⟶ Scope.</b></p>
+          <div class="diagram-container">
+            <img id="circuitImg" src="images/image1.png" alt="8051 Circuit">
+            <p id="diagramLabel">Figure : Logic Diagram</p>
+          </div>
+          <div class="popup-buttons">
+            <button id="toggleDiagram" class="blue-btn">View Block Diagram</button>
+            <button id="closeCircuit" class="red-btn">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="clickInfo" class="click-info">
+        <p><strong>Click at any point on the generated graph to know the values</strong></p>
+        <p id="dataInfo"></p>
+      </div>
+
+      <!-- Graph -->
+      <div class="graph-container">
+        <svg id="dacGraph" width="980" height="280"></svg>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © Copyright 2025 Virtual Labs, IIT Roorkee
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
