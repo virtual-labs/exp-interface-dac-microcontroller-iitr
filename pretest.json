@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the main function of a DAC?",
+    "answers": {
+      "a": "Converts analog to digital signals",
+      "b": "Converts digital to analog signals",
+      "c": "Amplifies voltage signals",
+      "d": "Stores digital data"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "The DAC0808 is a ___ -bit converter.",
+    "answers": {
+      "a": "4",
+      "b": "8",
+      "c": "12",
+      "d": "16"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "Which 8051 port is typically used for DAC interfacing?",
+    "answers": {
+      "a": "P0",
+      "b": "P1",
+      "c": "P2",
+      "d": "P3"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "question": "Sending incremental values (0-255) to a DAC generates a:",
+    "answers": {
+      "a": "Sine wave",
+      "b": "Square wave",
+      "c": "Ramp waveform",
+      "d": "Random noise"
+    },
+    "correctAnswer": "c"
+  },
+  {
+    "question": "An op-amp in a DAC circuit is primarily used to:",
+    "answers": {
+      "a": "Increase current output",
+      "b": "Convert current to voltage",
+      "c": "Generate clock pulses",
+      "d": "Store digital values"
+    },
+    "correctAnswer": "b"
+  }
+]

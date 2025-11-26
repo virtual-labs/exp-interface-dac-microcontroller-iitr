@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Increasing delays between DAC updates will:",
+    "answers": {
+      "a": "Increase output frequency",
+      "b": "Decrease output frequency",
+      "c": "Change the amplitude",
+      "d": "Have no effect"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "If the DAC input stays constant, the output will be:",
+    "answers": {
+      "a": "A ramp wave",
+      "b": "A DC voltage",
+      "c": "A sine wave",
+      "d": "Zero"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "To generate a triangular wave, you need to:",
+    "answers": {
+      "a": "Only increment values",
+      "b": "Alternate incrementing/decrementing",
+      "c": "Use random values",
+      "d": "Disable the op-amp"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "If the maximum digital value is 255, what is the corresponding analog voltage in this experiment?",
+    "answers": {
+      "a": "3.3 V",
+      "b": "5 V",
+      "c": "10 V",
+      "d": "12 V"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "question": "The op-amp helps the DAC by:",
+    "answers": {
+      "a": "Storing digital values",
+      "b": "Providing current amplification",
+      "c": "Converting current output to voltage",
+      "d": "Generating clock signals"
+    },
+    "correctAnswer": "c"
+  }
+]
